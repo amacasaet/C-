@@ -1,0 +1,137 @@
+Branching Statements
+
+if-else statement
+
+if (hours > 40)
+  gross_pay = rate * 40 + 1.5 * rate * (hours - 40);
+else
+  gross_pay = rate * hours;
+ 
+ ---------------------------------------------------------------------------------------
+  
+ Multiway if-else Statement
+
+Syntax
+if (Boolean_Expression_1)
+ Statement_1
+else if (Boolean_Expression_2)
+ Statement_2
+ .
+ .
+ .
+else if (Boolean_Expression_n)
+ Statement_n
+else
+ Statement_For_All_Other_Possibilities
+ 
+ if ((temperature <-10) && (day == SUNDAY))
+ cout << "Stay home.";
+else if (temperature <-10) //and day != SUNDAY
+ cout << "Stay home, but call work.";
+else if (temperature <= 0) //and temperature >= -10
+ cout << "Dress warm.";
+else //temperature > 0
+ cout << "Work hard and play hard.";
+ 
+ 
+ -------------------------------------------------------------------------------------
+ 
+switch Statement
+Syntax
+
+switch (Controlling_Expression)
+{
+ case Constant_1:
+ Statement_Sequence_1
+ break;
+ 
+ case Constant_2:
+ Statement_Sequence_2
+ break;
+ .
+ .
+ .
+ case Constant_n:
+ Statement_Sequence_n
+ break;
+ default:
+ Default_Statement_Sequence
+}
+Example
+int vehicle_class;
+cout << "Enter vehicle class: ";
+cin >> vehicle_class;
+switch (vehicle_class)
+{
+ case 1:
+ cout << "Passenger car.";
+ toll = 0.50;
+ break;
+ case 2:
+ cout << "Bus.";
+ toll = 1.50;
+ break;
+ case 3:
+ cout << "Truck.";
+ toll = 2.00;
+ break;
+ default:
+ cout << "Unknown vehicle class!";
+}
+-------------------------------------------------------------------------------------
+A while Statement with a Single Statement Body
+ while (Boolean_Expression)
+ Statement
+
+A while Statement with a Multistatement Body
+ while (Boolean_Expression)
+ {
+ Statement_1
+ Statement_2
+ .
+ .
+ .
+ Statement_Last
+ }
+
+A do-while Statement with a Single Statement Body
+ do
+ Statement
+ while (Boolean_Expression);
+
+A do-while Statement with a Multistatement Body
+ do
+ {
+ Statement_1
+ Statement_2
+ .
+ .
+ .
+ Statement_Last
+ } while (Boolean_Expression);
+Body
+Body
+
+
+
+-------------------
+
+
+SYNTAX
+ for (Initialization_Action; Boolean_Expression; Update_Action)
+ {
+ Statement_1
+ Statement_2
+ .
+ .
+ .
+ Statement_Last
+ }
+EXAMPLE
+ for (int number = 100; number >= 0; number--)
+ {
+ cout << number
+ << " bottles of beer on the shelf.\n";
+ if (number > 0)
+ cout << "Take one down and pass it around.\n";
+ }
